@@ -22,11 +22,11 @@ body {
 	padding: 10px;
 }
 
-.links1 {
+/*.links1 {
 	color: #fff;
 	float: right;
 	margin: 15px 0 0 0;
-}
+}*/
 
 div .row .btn-default {
 	background-color: #fff;
@@ -40,15 +40,6 @@ div .add {
 
 input[type="text"], textarea {
 	width: 80%;
-}
-
-.help-block {
-	color: red;
-}
-
-.loginForm {
-	width: 40%; 
-	margin: 0 auto;
 }
 
 .adminTask {

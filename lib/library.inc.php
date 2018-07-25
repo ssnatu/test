@@ -106,17 +106,13 @@ function get_user($loggedin, $username)
  * 
  * @return array $user
  */
-function get_session_user()
+function check_admin_logged_in()
 {
 	//$user_type = USER_ALL;
 	$user = [];
 	session_start();
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'])
 	{
-		$html = '<div class="col-xs-2 col-sm-2 col-lg-2">';
-		$html .= '<a href="logout.php" class="links1">Logout</a>';
-		$html .= '</div>';
-		echo $html;
 		$user = get_user($_SESSION['loggedin'], $_SESSION['username']);		
 	}
 	return $user;

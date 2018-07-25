@@ -13,4 +13,4 @@
 	  <div class="panel panel-default">
 	    <div class="panel-heading">    
 	    	<div class="row">
-	    		<div class="col-xs-10 col-sm-10 col-lg-10">
+	    		<div class="col-xs-12 col-sm-12 col-lg-12">

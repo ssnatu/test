@@ -10,24 +10,31 @@ include_once realpath(__DIR__) . '/lib/header.inc.php';
 ?>
 	    			<h2>Display City Attractions</h2>
 	    		</div>
-	    		<?php
-	    			$user = get_session_user(); //print_r($user);
-	    			if (empty($user))
-	    			{
-						$html = '<div class="col-xs-2 col-sm-2 col-lg-2">';
-						$html .= '<a href="login.php" class="links1">Login as admin</a>';
-						$html .= '</div>';
-						echo $html;
-	    			}
-	    			?>
 	    	</div>
 	    </div>
+	    		
+	    	<!--</div>
+	    </div>-->
 	    <div class="row">
-	    	<div class="col-xs-2 col-sm-2 col-lg-2">
+	    	<div class="col-xs-6 col-sm-6 col-lg-6">
 	    		<form method="post">
 					<input type="submit" class="btn btn-default btn-sm" name="topFive" value="List Top 5 Attractions">
 				</form>
 	    	</div>
+	    	<?php
+    			$user = check_admin_logged_in(); //print_r($user);
+    			$html = '<div class="col-xs-6 col-sm-6 col-lg-6">';
+    			if (empty($user))
+    			{
+					$html .= '<a href="login.php" class="links1">Login as admin</a>';
+    			}
+    			else
+    			{
+    				$html .= '<a href="logout.php" class="links1">Logout</a>';
+    			}
+    			$html .= '</div>';
+    			echo $html;
+    		?>
 	    </div>
 	    <table class="table table-responsive">
 	      <tbody>
